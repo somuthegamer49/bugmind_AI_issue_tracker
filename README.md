@@ -36,4 +36,4 @@ Make sure you have the following installed:
 ## Contact
 
 Somdutt Acharya - (https://www.linkedin.com/in/somdutt-acharya-29783542/)
-Project Link: [https://github.com](https://github.com)
+Github Link: ([Github Account](https://github.com/somuthegamer49))
