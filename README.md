@@ -32,7 +32,7 @@ Make sure you have the following installed:
 *   The Flask backend Ai Engine must run on port 5000
 *   The Json Server fake backend API for users must run on `http://localhost:8000/team_members`
 *   The Json Server fake backend API for tickets must run on `http://localhost:8001/tickets`
-*   To start json-server backend use `http://localhost:8001/tickets`,`http://localhost:8000/team_members`
+*   To start json-server backend use `npx json-server --watch users.json --port 8000`,`npx json-server --watch tickets.json --port 8001` on local terminal
 *   To start React app use `npm start`
 *   To start Flask app create python environment in your local directory and start app on port `5000`.
 
