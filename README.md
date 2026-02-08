@@ -5,7 +5,7 @@ The AI based ticket tracker for tech teams
 
 ## Live Demo
 
-If applicable, provide a link to the live application here: [Live Application URL](https://your-live-app-url.com).
+If applicable, provide a link to the live application here: [Video Demonstration Link](https://youtu.be/DhWVb3RAJGs?si=xxD4xKTYJxol2ROb).
 
 ## Built With
 
