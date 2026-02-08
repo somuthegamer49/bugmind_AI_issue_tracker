@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Issues - Flux Project</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#111722",
+                        "card-dark": "#1b253b",
+                        "border-dark": "#232f48"
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #232f48;
+            border-radius: 10px;
+        }
+        .table-row-hover:hover {
+            background-color: rgba(19, 91, 236, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden h-screen flex flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark px-6 py-3 shrink-0">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Flux Project</h2>
+</div>
+<label class="flex flex-col min-w-40 h-10 max-w-md">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-400 dark:text-[#92a4c9] flex border-none bg-slate-100 dark:bg-border-dark items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-100 dark:bg-border-dark h-full placeholder:text-slate-400 dark:placeholder:text-[#92a4c9] px-4 rounded-l-none pl-2 text-sm font-normal" placeholder="Search issues..."/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-border-dark text-slate-600 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-border-dark text-slate-600 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-border-dark mx-2"></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5u3Z9leZ6E3jG8hZAEx6gP0VWtld3TpWqwLqIr1_DlVvxb0t7z_DqoVnSsZBIbXHLbuVa5EOwUALeuPFviwAWSpE-j75oiQZx2gOXdDyBizY9uz_p0X6yUzwjq91n3KKhYgdfv5Fhu2NRFamIpgcR6atMGhSjllmyqlamvPucpCGynln9zEvmqWmy9O6Dd3yRfdR6h3Eb1ch8FanRaNAMVDr3NCxYIyI1La8HNRXmFAZ4dRUKgookLzkUKfhhNmrml4XYmktnHHQg");'></div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<aside class="w-64 border-r border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark flex flex-col justify-between p-4 shrink-0">
+<div class="flex flex-col gap-6">
+<div class="flex gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWO5RFRG72ruXYvl0n9gLjINagQEel4byUWRfanppNhsKubIKI_j1oXVNlQTcV1JtFY_XfVtBtVkNedISX0-mawaJAljW_rNCUkkfG5k87G6jkCF83mR0VOsZk4Un8lFUDbKbGgk2wySY9tWtyNBKZN_ebix2Lr_48qUqE5lUWtfYwGxvZQR9bXx73fqJI2uR4cnp8qSy-pPZ0NBnSDwm3Euy_Oxa_fOauxAW-0d_hLtaBBjlAvB0NgdKkt4zsXTzBFBgob8e3oOec");'></div>
+<div class="flex flex-col justify-center">
+<h1 class="text-slate-900 dark:text-white text-sm font-semibold leading-tight">Quantum Software</h1>
+<p class="text-slate-500 dark:text-[#92a4c9] text-xs font-normal">Active Sprint</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-border-dark transition-colors cursor-pointer">
+<span class="material-symbols-outlined">view_kanban</span>
+<p class="text-sm font-medium">Kanban Board</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">list_alt</span>
+<p class="text-sm font-semibold">All Issues</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-border-dark transition-colors cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboards</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-border-dark transition-colors cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium">Team Members</p>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-border-dark">
+<p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Shortcuts</p>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#92a4c9] hover:bg-slate-100 dark:hover:bg-border-dark transition-colors cursor-pointer">
+<span class="material-symbols-outlined">star</span>
+<p class="text-sm font-medium">Critical Bugs</p>
+</div>
+</div>
+</nav>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg h-11 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-blue-600 transition-all">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Create Issue</span>
+</button>
+</aside>
+<main class="flex-1 flex flex-col min-w-0 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="p-6 pb-2 shrink-0">
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-slate-500 dark:text-[#92a4c9] text-xs font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<span class="text-slate-300 dark:text-slate-600 text-xs">/</span>
+<a class="text-slate-500 dark:text-[#92a4c9] text-xs font-medium hover:text-primary transition-colors" href="#">Quantum Software</a>
+<span class="text-slate-300 dark:text-slate-600 text-xs">/</span>
+<span class="text-slate-900 dark:text-white text-xs font-semibold">All Issues</span>
+</div>
+<div class="flex flex-wrap justify-between items-end gap-3 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-white text-3xl font-black tracking-tight">Issues List</h1>
+<p class="text-slate-500 dark:text-[#92a4c9] text-sm font-medium">Project Alpha • 24 Issues Total</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center gap-2 rounded-lg h-9 px-4 bg-slate-200 dark:bg-border-dark text-slate-700 dark:text-white text-xs font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                        View Settings
+                    </button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-9 px-4 bg-primary/10 text-primary text-xs font-bold hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export
+                    </button>
+</div>
+</div>
+<div class="flex gap-3 flex-wrap items-center pb-4">
+<div class="flex gap-2 items-center">
+<div class="relative">
+<button class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<p class="text-slate-700 dark:text-white text-xs font-semibold">Status: All</p>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<p class="text-slate-700 dark:text-white text-xs font-semibold">Assignee</p>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<p class="text-slate-700 dark:text-white text-xs font-semibold">Priority</p>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex h-9 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-border-dark px-3 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<p class="text-slate-700 dark:text-white text-xs font-semibold">Label</p>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+<div class="h-4 w-[1px] bg-slate-300 dark:bg-slate-700"></div>
+<button class="text-slate-500 dark:text-slate-400 text-xs font-bold hover:text-primary transition-colors">Clear filters</button>
+</div>
+</div>
+<div class="flex-1 overflow-auto px-6 pb-6 custom-scrollbar">
+<div class="min-w-[800px] border border-slate-200 dark:border-border-dark rounded-xl bg-white dark:bg-surface-dark overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-slate-900/40">
+<th class="px-4 py-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest w-24">Key</th>
+<th class="px-4 py-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Summary</th>
+<th class="px-4 py-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest w-32">Status</th>
+<th class="px-4 py-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest w-32">Assignee</th>
+<th class="px-4 py-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest w-24">Priority</th>
+<th class="px-4 py-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest w-32">Created</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-border-dark/50">
+<tr class="table-row-hover transition-colors cursor-pointer group">
+<td class="px-4 py-4 text-xs font-bold text-slate-500 dark:text-slate-400">QS-124</td>
+<td class="px-4 py-4 text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Redesign the global navigation system for better accessibility</td>
+<td class="px-4 py-4">
+<span class="bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 text-[10px] font-bold px-2 py-1 rounded uppercase">In Progress</span>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPsst8SJVks3NsC6sqX1Yd94hif_bS_4F8msdasBBUcHaavH5XdwIF1jcAaBzJ19cyJAhBrGaQa8a-ggSN_jlAYJcjSPlFRjaiWxjwn1_A_LLpAytoiV7rHv5xYNAnGr7zmawLeqbwcZgnotPLUTLdo26cpkC1WIDGk9zWEhMsbb_jz0HOmTrdGDrVVeeC2nLXaCRh60cZMr7aoMY-EUxAWKghPrpyWO4xhFuuqd1X-rA54SAuULhQmyML2XDHqp1Qou4IRW_Mj65S');"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Alex Rivers</span>
+</div>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-1 text-red-500">
+<span class="material-symbols-outlined text-sm">keyboard_double_arrow_up</span>
+<span class="text-[10px] font-bold uppercase">High</span>
+</div>
+</td>
+<td class="px-4 py-4 text-xs text-slate-500 dark:text-slate-400">Oct 12, 2023</td>
+</tr>
+<tr class="table-row-hover transition-colors cursor-pointer group">
+<td class="px-4 py-4 text-xs font-bold text-slate-500 dark:text-slate-400">QS-125</td>
+<td class="px-4 py-4 text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Integrate Stripe payment gateway for subscription plans</td>
+<td class="px-4 py-4">
+<span class="bg-slate-100 dark:bg-border-dark text-slate-600 dark:text-slate-300 text-[10px] font-bold px-2 py-1 rounded uppercase">To Do</span>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0FwB7H1sZDYzD3qv7DSc9PxBb_q1yfqtzOIHzFnc1XEZoebdvkviw26JQqkvL-S-D6Jjtj5iS3WK0WTDG8wpUJF561AzsXiWnNCWuJBV5TArOoh8NgijIlIVoX_LZKBowGzHl1ht1BZOhTjgVBj2gKDn3X_R4XlfmQQlNelufNOgszhmmhCco26FsOkoy6Zx3yI-0WwU-omP69jT1xwKhApIyf7-8hDp-ClrkmN0nmBwBBPjZ0oRZ6WlV7Ozo43eQOSRQ8J2sq2SY');"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Marcus Chen</span>
+</div>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-sm">keyboard_arrow_up</span>
+<span class="text-[10px] font-bold uppercase">Medium</span>
+</div>
+</td>
+<td class="px-4 py-4 text-xs text-slate-500 dark:text-slate-400">Oct 14, 2023</td>
+</tr>
+<tr class="table-row-hover transition-colors cursor-pointer group">
+<td class="px-4 py-4 text-xs font-bold text-slate-500 dark:text-slate-400">QS-120</td>
+<td class="px-4 py-4 text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Fix data race condition in background synchronization</td>
+<td class="px-4 py-4">
+<span class="bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 text-[10px] font-bold px-2 py-1 rounded uppercase">In Progress</span>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsEUXsN4T-vj7NgGPWv9I2I6npn7kxdMktH3RWeL323yoqdDqxKXExHGHcWL90a3f-c4mSaq1kJCbyQEngBocdA4YQhmGiHa4HQhlDiWYyi7zirdgC9P0lKvNM4ChTY_-tYm_qlryb8mgdCNCjydX6jl1RYDcq389XTi7Q12T209CfPZWc7UvxLeWXdNBpGBBMLHNqhC2Sf1Jj_jtSkBiagTbpoSTgClUycJyxS4TWjMWYdytLcvBH0afOHEfMTFf6qsS80nzrCuWJ');"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-1 text-red-500">
+<span class="material-symbols-outlined text-sm">keyboard_double_arrow_up</span>
+<span class="text-[10px] font-bold uppercase">High</span>
+</div>
+</td>
+<td class="px-4 py-4 text-xs text-slate-500 dark:text-slate-400">Oct 10, 2023</td>
+</tr>
+<tr class="table-row-hover transition-colors cursor-pointer group">
+<td class="px-4 py-4 text-xs font-bold text-slate-500 dark:text-slate-400">QS-112</td>
+<td class="px-4 py-4 text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Export analytics reports to PDF/CSV format</td>
+<td class="px-4 py-4">
+<span class="bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300 text-[10px] font-bold px-2 py-1 rounded uppercase">In Review</span>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7IFCdY8X13vvJTek46Z1Ljsmp6mB3Gzu6q4pymKLMqAZDGMmerys61Xo0Fpgkeoies35PMr_ehAPWfK0KoSfMnZNuJ0E4Jj--HGjqATQINJLIZ2f8h8YkqUrCQf8sWw1p5GlQRJDAaLiqcBHhOHyYb6m-YnIQaWolXbEHmAXgx9FhdvW0DQGLhQXjjO1j52KRlfEl-nJQ0LHm278R1LkFzYfDh0Wg4vl-ez7-YlNqMckCMCILwaoOCyN10eE0tpDBKABUxa7_8r2S');"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Jordan Vane</span>
+</div>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-sm">keyboard_arrow_up</span>
+<span class="text-[10px] font-bold uppercase">Medium</span>
+</div>
+</td>
+<td class="px-4 py-4 text-xs text-slate-500 dark:text-slate-400">Oct 08, 2023</td>
+</tr>
+<tr class="table-row-hover transition-colors cursor-pointer group">
+<td class="px-4 py-4 text-xs font-bold text-slate-500 dark:text-slate-400">QS-108</td>
+<td class="px-4 py-4 text-sm font-medium text-slate-500 dark:text-slate-500 line-through">Update documentation with new endpoint specifications</td>
+<td class="px-4 py-4">
+<span class="bg-green-100 dark:bg-green-500/20 text-green-600 dark:text-green-300 text-[10px] font-bold px-2 py-1 rounded uppercase">Done</span>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-2 opacity-60">
+<div class="size-6 rounded-full bg-cover bg-center grayscale" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAClPRDYU5IbUgtFhmc3uZ9PI80dz-_WhJ2BFaxpS_xO5u4N5nExPTyvm3XfvbXuayc_2KLY95e0-I3lX4QSFrnIUnXJRAAjjBr_yaoz82sXtaMh3B5MTb3NdY0f9PQXarTpV9U63osb74R3blRLauI5MS3VrdkhM_WM-kN3tzqa5U2d9de-hRWSN23V-RGfK4a6JigwqjXL2s-KDSEzTuOEnmlEbgCyPl0_4lxMlz8i6I1hoodmf67WyiUd4cLmFoCaZ-XdJUlhMX');"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Lana Skye</span>
+</div>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-1 text-blue-500 opacity-60">
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+<span class="text-[10px] font-bold uppercase">Low</span>
+</div>
+</td>
+<td class="px-4 py-4 text-xs text-slate-500 dark:text-slate-400">Oct 05, 2023</td>
+</tr>
+<tr class="table-row-hover transition-colors cursor-pointer group">
+<td class="px-4 py-4 text-xs font-bold text-slate-500 dark:text-slate-400">QS-118</td>
+<td class="px-4 py-4 text-sm font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Implement dark mode toggle on settings page</td>
+<td class="px-4 py-4">
+<span class="bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 text-[10px] font-bold px-2 py-1 rounded uppercase">In Progress</span>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApIuyadLOcdik9NFExy0kPCyL310X_AQABwOCbKzLdclzkjD5iHH1zGHi1Cezw2WpWtsxOri7LLGniuuLW1AWPJ7_n4lfKyiKvEpc8eU2A5EbwPmU7Kgj63Yp1b4K85mv_ATnvGdCQUi3p90NNWBrQgP985Q8x_D-XDtTNWiUMzc57VhVHuHq2ZxycrNlasDRl3GSf-jMcRdURxb3piD7knjgRKQEKKZBDmsUtthHeqY2TJgA2n6g2Y1i2dy4HTSOL5Fu3GOm2DDGs');"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Elena Fisher</span>
+</div>
+</td>
+<td class="px-4 py-4">
+<div class="flex items-center gap-1 text-blue-500">
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+<span class="text-[10px] font-bold uppercase">Low</span>
+</div>
+</td>
+<td class="px-4 py-4 text-xs text-slate-500 dark:text-slate-400">Oct 09, 2023</td>
+</tr>
+</tbody>
+</table>
+<div class="px-4 py-3 border-t border-slate-200 dark:border-border-dark flex items-center justify-between bg-slate-50/30 dark:bg-slate-900/20">
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Showing 1 to 10 of 24 issues</p>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-8 w-8 bg-white dark:bg-border-dark text-slate-600 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-primary text-white text-xs font-bold">1</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-white dark:bg-border-dark text-slate-600 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">2</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-white dark:bg-border-dark text-slate-600 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">3</button>
+<button class="flex items-center justify-center rounded-lg h-8 w-8 bg-white dark:bg-border-dark text-slate-600 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
