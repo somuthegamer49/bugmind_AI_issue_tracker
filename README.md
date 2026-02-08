@@ -24,9 +24,7 @@ List the major technologies, frameworks, and libraries used to build the project
 *   Json_Server
 *   Redux
 
-### Guidelines
-
-Make sure you have the following installed:
+## Guidelines
 
 *   The Frontend React application should be running on `http://localhost:3000`.
 *   The Flask backend Ai Engine must run on port 5000
