@@ -1,0 +1,104 @@
+{
+    "team_members": [
+      {
+        "id":"1",
+        "name": "Amit Sharma",
+        "email": "amit.sharma@bugmind.com",
+        "image":"https://randomuser.me/api/portraits/men/75.jpg",
+        "role": "Platform Admin",
+        "department": "IT Operations",
+        "location": "Bengaluru, India",
+        "tickets": [{}]
+      },
+      {
+        "id":"2",
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/women/65.jpg",
+        "role": "Product Manager",
+        "department": "Product",
+        "location": "San Francisco, USA",
+        "tickets": [{}]
+      },
+      {
+        "id":"3",
+        "name": "Rahul Verma",
+        "email": "rahul.verma@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/men/82.jpg",
+        "role": "Frontend Developer",
+        "department": "Engineering",
+        "location": "Pune, India",
+        "tickets": [{}]
+      },
+      {
+        "id":"4",
+        "name": "Emily Chen",
+        "email": "emily.chen@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/women/77.jpg",
+        "role": "Backend Developer",
+        "department": "Engineering",
+        "location": "Toronto, Canada",
+        "tickets": [{}]
+      },
+      {
+        "id":"5",
+        "name": "Neha Kapoor",
+        "email": "neha.kapoor@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/women/81.jpg",
+        "role": "QA Engineer",
+        "department": "Quality Assurance",
+        "location": "Noida, India",
+        "tickets": [{}]
+      },
+      {
+        "id":"6",
+        "name": "Lucas Müller",
+        "email": "lucas.muller@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/men/53.jpg",
+        "role": "UX Designer",
+        "department": "Design",
+        "location": "Berlin, Germany",
+        "tickets": [{}]
+      },
+      {
+        "id":"7",
+        "name": "Priya Nair",
+        "email": "priya.nair@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/women/50.jpg",
+        "role": "Customer Support Engineer",
+        "department": "Support",
+        "location": "Kochi, India",
+        "tickets": [{}]
+      },
+      {
+        "id":"8",
+        "name": "Daniel Wong",
+        "email": "daniel.wong@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/men/92.jpg",
+        "role": "DevOps Engineer",
+        "department": "Infrastructure",
+        "location": "Singapore",
+        "tickets": [{}]
+      },
+      {
+        "id":"9",
+        "name": "Ananya Singh",
+        "email": "ananya.singh@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/women/45.jpg",
+        "role": "Data Analyst",
+        "department": "Analytics",
+        "location": "Gurugram, India",
+        "tickets": [{}]
+      },
+      {
+        "id":"10",
+        "name": "Michael Brown",
+        "email": "michael.brown@bugmind.com",
+        "image": "https://randomuser.me/api/portraits/men/18.jpg",
+        "role": "Security Engineer",
+        "department": "Security",
+        "location": "Austin, USA",
+        "tickets": [{}]
+      }
+    ]
+}
