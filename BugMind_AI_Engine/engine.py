@@ -10,7 +10,7 @@ from io import BytesIO
 
 # Funtion to generate AI Resolution Content
 def generateSol(query,img):
-    client = genai.Client(api_key="AIzaSyCptb5IlzJEcxEwBEEMPZXTzFIMS9nM51Y")
+    client = genai.Client(api_key="<ENTER YOUR GEMINI 3 AI API KEY>")
     response_schema = types.Schema(
     type=types.Type.OBJECT,
     properties={
@@ -74,4 +74,5 @@ def decode_base64_to_pillow(base64_string):
     except base64.binascii.Error as e:  
         return None
     except IOError as e:  
+
         return None
